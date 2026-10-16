@@ -1,0 +1,7 @@
+name = "form-backend"
+main = "formBackend.worker.js"
+compatibility_date = "2024-01-01"
+
+# Secrets are set via CLI (never commit real values):
+# npx wrangler secret put NOTIFY_EMAIL
+# npx wrangler secret put SENDER_EMAIL
