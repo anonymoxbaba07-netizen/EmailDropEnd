@@ -10,8 +10,12 @@ services:
       - key: NODE_VERSION
         value: 20
       - key: RESEND_API_KEY
-        sync: false   # set in Render dashboard
+        sync: false   # Resend API key (email delivery)
       - key: NOTIFY_EMAIL
-        sync: false   # set in Render dashboard
+        sync: false   # where submissions are sent
       - key: SENDER_EMAIL
         sync: false   # optional; defaults to onboarding@resend.dev
+      - key: ZAPIER_WEBHOOK_URL
+        sync: false   # optional; only if you have paid Zapier webhooks
+      - key: ALLOWED_ORIGIN
+        sync: false   # optional; e.g. https://yoursite.com
