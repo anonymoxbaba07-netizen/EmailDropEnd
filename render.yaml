@@ -5,16 +5,13 @@ services:
     plan: free
     buildCommand: npm install
     startCommand: node formBackend.js
+    healthCheckPath: /
     envVars:
-      - key: PORT
-        value: 3000
-      - key: SMTP_HOST
-        value: smtp.gmail.com
-      - key: SMTP_PORT
-        value: 587
-      - key: SMTP_USER
-        sync: false   # set manually in Render dashboard
-      - key: SMTP_PASS
-        sync: false   # set manually in Render dashboard
+      - key: NODE_VERSION
+        value: 20
+      - key: RESEND_API_KEY
+        sync: false   # set in Render dashboard
       - key: NOTIFY_EMAIL
-        sync: false   # set manually in Render dashboard
+        sync: false   # set in Render dashboard
+      - key: SENDER_EMAIL
+        sync: false   # optional; defaults to onboarding@resend.dev
